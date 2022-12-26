@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>* {
+    box-sizing: border-box;
+  }
+  
+  /* Style the body */
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  /* Header/logo Title */
+  .header {
+    padding: 80px;
+    text-align: center;
+    background-image: url("home_pic.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+  }
+  
+  /* Increase the font size of the heading */
+  .header h1 {
+    font-size: 40px;
+  }
+  
+  /* Style the top navigation bar */
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Style the navigation bar links */
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  /* Right-aligned link */
+  .navbar a.right {
+    float: right;
+  }
+  
+  /* Change color on hover */
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Column container */
+  .row {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+  }
+  
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  .side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  /* Main column */
+  .main {   
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: rgb(18, 18, 18);
+    color: white;
+    padding: 20px;
+  }
+  
+  /* Fake image, just for this example */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+    .row {   
+      flex-direction: column;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .navbar a {
+      float: none;
+      width: 100%;
+    }
+  }
+  
+  /* Three image containers (use 25% for four, and 50% for two, etc) */
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 33.33%;
+    padding: 5px;
+  }
+
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>KOI RESTAURANT</h1>
+  <p></p>
+</div>
+
+<div class="navbar">
+  <a href="Index.HTML">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="reservation.html">Reservation</a>
+  <a href="contact.html">Contact</a>
+  <a href="aboutus.html" class="right">About Us</a>
+</div>
+
+
+  <div class="main">
+    <h1>Our Story</h1>
+    <div class="row">
+        <div class="column">
+          <p align = "justify">
+            KOI Restaurant was first opened in 2nd May 2018 in the heart of Pulau Tioman. 
+            The owner of the restaurant, Encik Thaqif have worked under Chef Wan before for 5 years at De Wan, Kuala Lumpur.
+             Despite this, he decides to start operating a restaurant that serves good quality and authentic Malaysian dish. 
+             Always holding true to the motto “Koi suka, Aok pun suka”, we were able to attract and built a loyal clientele.
+              So many people loved taking their friends and family to eat at KOI Restaurant over the next year, 
+              we quickly outgrew our original location and opened up another restaurant in Temerloh.
+               Treat yourself to the best Malaysian food and customer service at any both of our location in Pahang.
+        </p><br>
+        <img src="aboutus_pic.jpeg" alt="Snow" style="width:40%">
+        <img src="home_pic6.jpg" alt="Snow" style="width:40%">
+        </div>
+    </div>
+    <br>
+    <br>
+</div>
+
+<div class="footer">
+  <h2>Thank You</h2>
+</div>
+
+</body>
+
+<script>
+  window.onload = function() {
+  createScrollToTopButton();
+};
+
+function createScrollToTopButton() {
+  // create the button
+  const button = document.createElement("button");
+  button.innerHTML = "Scroll to top";
+
+  // style the button
+  button.style.position = "fixed";
+  button.style.bottom = "20px";
+  button.style.right = "30px";
+  button.style.zIndex = "99";
+  button.style.cursor = "pointer";
+  button.style.border = "none";
+  button.style.outline = "none";
+  button.style.backgroundColor = "rgba(0,0,0,0.3)";
+  button.style.color = "#fff";
+  button.style.fontSize = "18px";
+  button.style.padding = "12px";
+  button.style.borderRadius = "4px";
+
+  // add the click event handler
+  button.addEventListener("click", function() {
+    // scroll back up to the top of the page
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // append the button to the body
+  document.body.appendChild(button);
+}
+ </script>
+</html>
